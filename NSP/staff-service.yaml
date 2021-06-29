@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: staff-service-network-policy
+  namespace: fleetman
+spec:
+  podSelector:
+    matchLabels:
+      app: staff-service
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: position-tracker
+    - podSelector:
+        matchLabels:
+          app: api-gateway
+    # ports:
+    # - protocol: TCP
+    #   port: 8080

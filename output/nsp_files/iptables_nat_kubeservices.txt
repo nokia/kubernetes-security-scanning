@@ -1,0 +1,15 @@
+Chain                      KUBE-SERVICES  (2   references)
+target                     prot           opt  source           destination
+KUBE-MARK-MASQ             tcp            --   !192.168.0.0/16  10.102.97.187  /*  calico-system/calico-kube-controllers-metrics:metrics-port  cluster  IP          */     tcp   dpt:9094
+KUBE-SVC-KQVGIOWQAVNMB2ZL  tcp            --   0.0.0.0/0        10.102.97.187  /*  calico-system/calico-kube-controllers-metrics:metrics-port  cluster  IP          */     tcp   dpt:9094
+KUBE-MARK-MASQ             tcp            --   !192.168.0.0/16  10.96.58.90    /*  calico-system/calico-typha:calico-typha                     cluster  IP          */     tcp   dpt:5473
+KUBE-SVC-RK657RLKDNVNU64O  tcp            --   0.0.0.0/0        10.96.58.90    /*  calico-system/calico-typha:calico-typha                     cluster  IP          */     tcp   dpt:5473
+KUBE-MARK-MASQ             tcp            --   !192.168.0.0/16  10.96.0.1      /*  default/kubernetes:https                                    cluster  IP          */     tcp   dpt:443
+KUBE-SVC-NPX46M4PTMTKRN6Y  tcp            --   0.0.0.0/0        10.96.0.1      /*  default/kubernetes:https                                    cluster  IP          */     tcp   dpt:443
+KUBE-MARK-MASQ             udp            --   !192.168.0.0/16  10.96.0.10     /*  kube-system/kube-dns:dns                                    cluster  IP          */     udp   dpt:53
+KUBE-SVC-TCOU7JCQXEZGVUNU  udp            --   0.0.0.0/0        10.96.0.10     /*  kube-system/kube-dns:dns                                    cluster  IP          */     udp   dpt:53
+KUBE-MARK-MASQ             tcp            --   !192.168.0.0/16  10.96.0.10     /*  kube-system/kube-dns:dns-tcp                                cluster  IP          */     tcp   dpt:53
+KUBE-SVC-ERIFXISQEP7F7OF4  tcp            --   0.0.0.0/0        10.96.0.10     /*  kube-system/kube-dns:dns-tcp                                cluster  IP          */     tcp   dpt:53
+KUBE-MARK-MASQ             tcp            --   !192.168.0.0/16  10.96.0.10     /*  kube-system/kube-dns:metrics                                cluster  IP          */     tcp   dpt:9153
+KUBE-SVC-JD5MR3NA4I4DYORP  tcp            --   0.0.0.0/0        10.96.0.10     /*  kube-system/kube-dns:metrics                                cluster  IP          */     tcp   dpt:9153
+KUBE-NODEPORTS             all            --   0.0.0.0/0        0.0.0.0/0      /*  kubernetes                                                  service  nodeports;  NOTE:  this  must      be  the  last  rule  in  this  chain  */  ADDRTYPE  match  dst-type  LOCAL

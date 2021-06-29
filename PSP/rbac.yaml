@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: default
+  name: pod-reader
+rules:
+- apiGroups: [""]         # here, apiGroups is Core API GRoup
+  resources: ["pods"]        # resource one can access
+  verbs: ["get", "watch", "list","create"]       # actions on resource. We can get the list of verbs from API group.
+- apiGroups: [""]                  # here, apiGroups is Core API GRoup
+  resources: ["pods/exec"]           # pods resource of api group
+  verbs: ["create"]          #  Here, we are just using create verb
+

@@ -1,0 +1,14 @@
+# Files and Folders
+env/
+__pycache__/
+.vagrant/
+id_rsa
+.vscode
+
+
+# Executables
+*.pub
+*.gz
+*.tar
+*.zip
+

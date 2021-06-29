@@ -1,0 +1,132 @@
+2021-06-02 12:46:53,201 | INFO | Checking enabled authorization modes and admission controllers
+2021-06-02 12:46:53,201 | WARNING | AlwaysPullImages admission controller should be enforced on the cluster
+2021-06-02 12:46:53,201 | INFO | Fetching Pod Security Policies...
+2021-06-02 12:46:54,340 | INFO | Now, Fetching Pods information...
+2021-06-02 12:46:54,390 | INFO |                                      Podname      Namespace  ...     resources_limits                                 resources_requests
+0   calico-kube-controllers-5ccd78d7d4-tdpm6  calico-system  ...                 None                                               None
+1                          calico-node-b84cv  calico-system  ...                 None                                               None
+2                          calico-node-vtjtv  calico-system  ...                 None                                               None
+3              calico-typha-547486645c-f9zfj  calico-system  ...                 None                                               None
+4              calico-typha-547486645c-xgcrs  calico-system  ...                 None                                               None
+5                               hostpath-pod        default  ...                 None                                               None
+6                                    hostpid        default  ...                 None                                               None
+7                                      mypod        default  ...                 None                                               None
+8                               priv-esc-pod        default  ...                 None                                               None
+9                             privileged-pod        default  ...                 None                                               None
+10                                      pod3       external  ...                 None                                               None
+11                   coredns-74ff55c5b-jbpbz    kube-system  ...  {'memory': '170Mi'}                  {'cpu': '100m', 'memory': '70Mi'}
+12                   coredns-74ff55c5b-q82ct    kube-system  ...  {'memory': '170Mi'}                  {'cpu': '100m', 'memory': '70Mi'}
+13                               etcd-master    kube-system  ...                 None  {'cpu': '100m', 'ephemeral-storage': '100Mi', ...
+14                     kube-apiserver-master    kube-system  ...                 None                                    {'cpu': '250m'}
+15            kube-controller-manager-master    kube-system  ...                 None                                    {'cpu': '200m'}
+16                          kube-proxy-c8tl2    kube-system  ...                 None                                               None
+17                     kube-scheduler-master    kube-system  ...                 None                                    {'cpu': '100m'}
+
+[18 rows x 20 columns]
+2021-06-02 12:46:54,496 | CRITICAL | AllowPrivilageEscalation should be avoided. Remove it from below pods 
+         Podname Namespace
+8  priv-esc-pod   default 
+
+2021-06-02 12:46:54,507 | CRITICAL | Pods running with privileged capabilities should be avoided. Remove it from below pods 
+           Podname Namespace
+9  privileged-pod   default 
+
+2021-06-02 12:46:54,521 | WARNING | ReadOnlyRootFileSystem should be enforced. Enforce it on below pods 
+            Podname Namespace
+5     hostpath-pod   default
+6          hostpid   default
+7            mypod   default
+8     priv-esc-pod   default
+9   privileged-pod   default
+10            pod3  external 
+
+2021-06-02 12:46:54,538 | WARNING | ImagePullPolicy="Always" should be enforced. Enforce it on below pods 
+         Podname Namespace
+7         mypod   default
+8  priv-esc-pod   default 
+
+2021-06-02 12:46:54,554 | CRITICAL | HostPath mounting should be avoided. Remove it from below pods 
+         Podname Namespace
+5  hostpath-pod   default 
+
+2021-06-02 12:46:54,570 | WARNING | Resources memory limits should be defined. Add it on below pods 
+            Podname Namespace
+5     hostpath-pod   default
+6          hostpid   default
+7            mypod   default
+8     priv-esc-pod   default
+9   privileged-pod   default
+10            pod3  external 
+
+2021-06-02 12:46:54,583 | WARNING | Resources requests limits should be defined. Add it on below pods 
+            Podname Namespace
+5     hostpath-pod   default
+6          hostpid   default
+7            mypod   default
+8     priv-esc-pod   default
+9   privileged-pod   default
+10            pod3  external 
+
+2021-06-02 12:46:54,598 | CRITICAL | HostPID usage should be avoided. Remove it from below pods 
+    Podname Namespace
+6  hostpid   default 
+
+2021-06-02 12:46:54,614 | CRITICAL | Host Network usage should be avoided. Remove it from below pods 
+    Podname Namespace
+6  hostpid   default 
+
+2021-06-02 12:46:54,627 | CRITICAL | Host IPC usage should be avoided. Remove it from below pods 
+    Podname Namespace
+6  hostpid   default 
+
+2021-06-02 12:46:54,640 | WARNING | Default token mounting should be avoided. Remove it from below pods 
+            Podname Namespace
+6          hostpid   default
+7            mypod   default
+8     priv-esc-pod   default
+9   privileged-pod   default
+10            pod3  external 
+
+2021-06-02 12:46:54,656 | WARNING | Pods must run as non_root user. For example: add "runAsUser: 1000" in below pods 
+            Podname Namespace
+5     hostpath-pod   default
+6          hostpid   default
+7            mypod   default
+8     priv-esc-pod   default
+9   privileged-pod   default
+10            pod3  external 
+
+2021-06-02 12:46:54,670 | WARNING | Pod´s group must run as non_root. For example: add "runAsGroup: 3000" in below pods 
+            Podname Namespace
+5     hostpath-pod   default
+6          hostpid   default
+7            mypod   default
+8     priv-esc-pod   default
+9   privileged-pod   default
+10            pod3  external 
+
+2021-06-02 12:46:54,687 | WARNING | Drop all capabilities and add only required capabilities to reduce syscall attack surface. Drop capabilities from below pods 
+            Podname Namespace
+5     hostpath-pod   default
+6          hostpid   default
+8     priv-esc-pod   default
+9   privileged-pod   default
+10            pod3  external 
+
+2021-06-02 12:46:54,702 | WARNING | Drop NET_RAW capability to reduce network exploits on host machines. Drop NET_RAW capability from below pods 
+   Podname Namespace
+7   mypod   default 
+
+2021-06-02 12:46:55,012 | INFO | Capturing networkpolicies in default namespace
+2021-06-02 12:46:55,220 | INFO | Capturing networkpolicies in fleetman namespace
+2021-06-02 12:46:55,628 | WARNING | privileged-pod pod doesnot have a network policy
+2021-06-02 12:46:55,628 | WARNING | priv-esc-pod pod doesnot have a network policy
+2021-06-02 12:46:55,629 | WARNING | mypod pod doesnot have a network policy
+2021-06-02 12:46:55,630 | WARNING | hostpid pod doesnot have a network policy
+2021-06-02 12:46:55,630 | WARNING | hostpath-pod pod doesnot have a network policy
+2021-06-02 12:46:55,631 | WARNING | pod3 pod doesnot have a network policy
+2021-06-02 12:46:55,659 | WARNING | Both policyTypes Ingress and Egress should be enforced by individual Networkpolicy. Please apply both policyTypes on below networkpolicies 
+                           PolicyName Namespace PolicyTypes
+1  position-simulator-network-policy  fleetman  ['Egress'] 
+
+2021-06-02 12:46:55,689 | INFO | Running nmap on cluster IP

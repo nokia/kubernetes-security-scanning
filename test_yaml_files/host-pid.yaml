@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hostpid
+spec:
+  hostPID: true
+  hostNetwork: true
+  hostIPC: true
+  containers:
+  - image: busybox
+    name: demo-pod
+    command:
+      - sleep
+      - "3600"

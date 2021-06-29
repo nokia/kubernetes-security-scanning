@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: position-tracker-network-policy
+  namespace: fleetman
+spec:
+  podSelector:
+    matchLabels:
+      app: position-tracker
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: api-gateway
+    - podSelector:
+        matchLabels:
+          app: position-simulator
+    # ports:
+    # - protocol: TCP
+    #   port: 8080
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          app: staff-service
+    - podSelector:
+        matchLabels:
+          app: vehicle-telemetry
+    # ports:
+    # - protocol: TCP
+    #   port: 8080

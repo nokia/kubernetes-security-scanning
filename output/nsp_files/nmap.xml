@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Wed Jun  2 12:46:56 2021 as: nmap -O -T4 -PE -&#45;osscan-limit -v -sS -p - -oX - 10.0.0.3 -->
+<nmaprun scanner="nmap" args="nmap -O -T4 -PE -&#45;osscan-limit -v -sS -p - -oX - 10.0.0.3" start="1622638016" startstr="Wed Jun  2 12:46:56 2021" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1622638016"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1622638016"/>
+<taskbegin task="SYN Stealth Scan" time="1622638016"/>
+<taskprogress task="SYN Stealth Scan" time="1622638025" percent="72.92" remaining="4" etc="1622638028"/>

@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  name: default
+  namespace: fleetman
+spec:
+  selector:
+    matchLabels:
+      app: webapp
+  mtls:
+    mode: PERMISSIVE
+  portLevelMtls:
+    8080:
+      mode: DISABLE

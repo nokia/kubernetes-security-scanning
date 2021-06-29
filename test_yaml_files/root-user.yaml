@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rootuser-pod
+spec:
+  containers:
+  - name: rootuser-pod
+    image: nginx
+    securityContext:
+      runAsUser: 0
