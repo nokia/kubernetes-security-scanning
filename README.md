@@ -9,7 +9,10 @@ This tool provides a comprehensive scanning and reporting of the security status
 This tool has been developed by Monika Rangta (https://github.com/mrangta), while working as Master´s Thesis Worker in Nokia. 
 
 ## Installation
-Clone this repository to your machine.
+Check out **kubernetes-security-scanning** repository:
+
+`git clone git@github.com:nokia/kubernetes-security-scanning.git`
+
 #### For Ubuntu Users:
 Please ensure to have **python3**, **nmap**, **iptables** installed on the nodes to use this tool
 #### For Windows Users:
@@ -48,7 +51,7 @@ All these files will be generated in their respective directories under **output
 ## Generation Examples (Manual Procedure)
 #### Successful case
 ```
-# python3 main.py -kubeconfig /home/vagrant/.kube/monika_config -apiServer kube-apiserver-master -ip 10.0.0.2
+# python3 main.py -kubeconfig /home/vagrant/.kube/config -apiServer kube-apiserver-master -ip 10.0.0.2
   INFO     | Checking enabled authorization modes and admission controllers
   WARNING  | AlwaysPullImages admission controller should be enforced on the cluster
   INFO     | Fetching Pod Security Policies...
