@@ -3,10 +3,10 @@
 [logo]: img/kubepatrol_logo.png "KubePatrol"
 
 ## KubePatrol
-This tool provides a comprehensive scanning and reporting of the security status of a Kubernetes cluster. It helps Kubernetes cluster administrator to check whether Network related security checks and Pod related security checks are in place or not. Tool goes deep into the container and analyze security issues within the underlying container, and, in most cases, suggests fixes to the detected security issues. It further performs the drift configuration detection for implemented network polices. This tool can be run from either worker nodes or master node.
+This tool provides a comprehensive scanning and reporting of the security status of a Kubernetes cluster. It helps Kubernetes cluster administrators to check whether Network-related security checks and Pod related security checks are in place or not. The tool goes deep into the container and analyzes security issues within the underlying container and, in most cases, suggests fixes to the detected security issues. It further performs the drift configuration detection for implemented network policies. You can run this tool either from worker nodes or master nodes.
 
 ## Developer
-This tool has been developed by Monika Rangta (https://github.com/mrangta), while working as Master´s Thesis Worker in Nokia. 
+This tool is developed by Monika Rangta (https://github.com/mrangta) during her employment period in Nokia as a Master's Thesis Worker. 
 
 ## Installation
 Check out **kubernetes-security-scanning** repository:
@@ -20,7 +20,7 @@ Please ensure to have **python3**, **nmap** installed on the nodes to use this t
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-Also ensure all the required modules mentioned in **requirements.txt** are installed, if not please install using the following:
+Also, ensure all the required modules mentioned in **requirements.txt** are installed; if not, please install using the following command:
 
 `pip3 install -r requirements.txt`
 
@@ -46,7 +46,7 @@ optional arguments:
 ## Generating Files
 Currently the **main.py** script generates the **psp_capabilities.csv**, **pods_info.csv**, **nsp.csv**, **nmap.xml**, **iptables_nat.xml**, **iptables_nat_kubeservices.txt** and **main_result.log** files
 
-All these files will be generated in their respective directories under **output** directory. Currently **output** directory contains the example output files, which will automatically update with your cluster configurations after running this tool.
+All the above files get generated in their respective directories under **output** directory. Currently, **output** directory contains the example output files, **output** directory will automatically update with your cluster configurations after running this tool.
 
 ## Generation Examples (Manual Procedure)
 #### Successful case
@@ -154,6 +154,6 @@ All these files will be generated in their respective directories under **output
 
   INFO     | Running nmap on cluster IP
   INFO     | Running iptables command on cluster IP
-  INFO     | Completed the static analysis scan. Please check output folder for the scan result.
+  INFO     | Completed the static analysis scan. Please check the output folder for the scan result.
 ```
 

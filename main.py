@@ -544,7 +544,7 @@ def main():
         nmap(clusterIP, sudo)
         log.info("Running iptables command on cluster IP")
         iptables()
-    log.info("Completed the static analysis scan. Please check output folder for the scan result")
+    log.info("Completed the static analysis scan. Please check the output folder for the scan result")
 
 
 if __name__ == "__main__":
