@@ -44,9 +44,9 @@ optional arguments:
   -win, --windows       Enter -win if Kubernetes cluster is running on windows
 ```
 ## Generating Files
-Currently the **main.py** script generates the **psp_capabilities.csv**, **pods_info.csv**, **nsp.csv**, **nmap.xml**, **iptables_nat.yaml**, **iptables_nat_kubeservices.txt** and **main_result.log** files
+Currently the **main.py** script generates the **psp_capabilities.csv**, **pods_info.csv**, **nsp.csv**, **nmap.xml**, **iptables_nat.xml**, **iptables_nat_kubeservices.txt** and **main_result.log** files
 
-All these files will be generated in their respective directories under **output** directory.
+All these files will be generated in their respective directories under **output** directory. Currently **output** directory contains the example output files, which will automatically update with your cluster configurations after running this tool.
 
 ## Generation Examples (Manual Procedure)
 #### Successful case
