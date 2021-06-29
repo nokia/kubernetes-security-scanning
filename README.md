@@ -6,7 +6,7 @@
 This tool provides a comprehensive scanning and reporting of the security status of a Kubernetes cluster. It helps Kubernetes cluster administrator to check whether Network related security checks and Pod related security checks are in place or not. Tool goes deep into the container and analyze security issues within the underlying container, and, in most cases, suggests fixes to the detected security issues. It further performs the drift configuration detection for implemented network polices. This tool can be run from either worker nodes or master node.
 
 ## Developer
-This tool has been developed by Monika Rangta (monikarangta@icloud.com), while working as Master´s Thesis Worker in Nokia. 
+This tool has been developed by Monika Rangta (https://github.com/mrangta), while working as Master´s Thesis Worker in Nokia. 
 
 ## Installation
 Clone this repository to your machine.
